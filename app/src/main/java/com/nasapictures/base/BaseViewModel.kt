@@ -11,8 +11,7 @@ import timber.log.Timber
 import javax.inject.Inject
 @HiltViewModel
 open class BaseViewModel @Inject constructor(application: Application) : AndroidViewModel(application) {
-    protected val context
-        get() = getApplication<Application>()
+    protected val context get() = getApplication<Application>()
     init {
         Timber.d("init: $displayName")
     }

@@ -7,11 +7,10 @@ import com.nasapictures.databinding.ImageBinding
 import com.nasapictures.gui.model.ResponseDataItem
 import com.sensibol.android.base.loadUrl
 import dagger.hilt.android.scopes.FragmentScoped
-import javax.inject.Inject
 import kotlin.properties.Delegates
 
 @FragmentScoped
-class ImageAdapter @Inject constructor() : RecyclerView.Adapter<ImageAdapter.ImageVH>() {
+class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageVH>() {
 
     internal var onImageClickListener: (ResponseDataItem) -> Unit = {}
     internal var ResponseData: List<ResponseDataItem> by Delegates.observable(emptyList()) { _, _, _ ->

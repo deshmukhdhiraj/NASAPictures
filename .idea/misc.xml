@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/image.xml" value="0.17760416666666667" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/image_detail.xml" value="0.21197916666666666" />
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/landing.xml" value="0.17760416666666667" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/swipe.xml" value="0.1" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/swipeimageview.xml" value="0.21197916666666666" />
       </map>
     </option>
   </component>

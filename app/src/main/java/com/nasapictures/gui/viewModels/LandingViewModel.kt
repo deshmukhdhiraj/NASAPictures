@@ -25,24 +25,33 @@ internal class LandingViewModel(
         }
     }
 
+
+    internal fun getSortedImages(imageData: ResponseDataItem) {
+
+
+        launchUseCases {
+            val getNasaImages: List<ResponseDataItem> = getAssetPodcasts()!!
+            var mutableList = mutableListOf<ResponseDataItem>().apply {
+                this.addAll(getNasaImages)
+                this.remove(imageData)
+                this.add(0, imageData)
+            }
+            _getNasaImages.postValue(mutableList)
+
+        }
+    }
+
     fun getAssetPodcasts(): List<ResponseDataItem>? {
         val moshi = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())
             .build()
-
-
         val file = "data.json"
-
         val myjson = context.assets.open(file).bufferedReader().use { it.readText() }
-
-        val listType  = Types.newParameterizedType(
+        val listType = Types.newParameterizedType(
             MutableList::class.java,
-           ResponseDataItem::class.java
+            ResponseDataItem::class.java
         )
         val adapter: JsonAdapter<List<ResponseDataItem>> = moshi.adapter(listType)
-
-//        val listType  = Types.newParameterizedType(List::class.java, ResponseData::class.java)
-//        val adapter: JsonAdapter<List<ResponseDataItem>> = moshi.adapter(listType)
         return adapter.fromJson(myjson)
     }
 }

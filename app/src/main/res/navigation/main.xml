@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@+id/landingFrag">
+    app:startDestination="@id/landingFrag">
 
 
     <fragment
@@ -12,6 +12,18 @@
         android:label="LandingFragment"
         tools:layout="@layout/landing">
 
+        <action
+            android:id="@+id/action_landingFrag_to_imageDetailFrag"
+            app:destination="@id/imageDetailFrag" />
     </fragment>
 
+    <fragment
+        android:id="@+id/imageDetailFrag"
+        android:name="com.android.base.com.nasapictures.gui.fragment.ImageDetail"
+        android:label="ImageDetail"
+        >
+        <argument
+            android:name="imagedata"
+            app:argType="com.nasapictures.gui.model.ResponseDataItem" />
+    </fragment>
 </navigation>

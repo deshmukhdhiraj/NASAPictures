@@ -3,6 +3,7 @@ package com.android.base.com.nasapictures.gui.fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.nasapictures.R
@@ -21,7 +22,7 @@ class Landing : BaseFragment() {
         get() = LandingBinding::inflate
     override val binding: LandingBinding get() = super.binding as LandingBinding
 
-    @Inject
+
     internal lateinit var imageAdapter: ImageAdapter
     private val viewModel: LandingViewModel by viewModels()
 
@@ -29,7 +30,7 @@ class Landing : BaseFragment() {
     override fun onInitView() {
         viewModel.apply {
             observe(getNasaImages) {
-                imageAdapter.ResponseData = it;
+                imageAdapter.ResponseData = it
             }
             getImages()
         }
@@ -41,6 +42,18 @@ class Landing : BaseFragment() {
                 adapter = imageAdapter
 
             }
+            imageAdapter.apply {
+                onImageClickListener = {
+                    //findNavController().navigate(R.id.action_landingFrag_to_imageDetailFrag)
+
+                    findNavController().navigate(
+                        LandingDirections.actionLandingFragToImageDetailFrag(
+                            it
+                        )
+                    )
+                }
+            }
+
         }
     }
 
