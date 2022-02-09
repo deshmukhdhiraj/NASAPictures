@@ -3,7 +3,7 @@ package com.sensibol.android.base.com.nasapictures.gui.fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
-import com.android.base.com.nasapictures.gui.fragment.ImageDetail.Companion.ARG_OBJECT
+import com.android.base.com.nasapictures.gui.fragment.SwipableImageDetail.Companion.ARG_OBJECT
 import com.nasapictures.R
 import com.nasapictures.base.BaseFragment
 import com.nasapictures.databinding.SwipeBinding

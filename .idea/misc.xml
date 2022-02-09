@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/default_pager_dot.xml" value="0.1385" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/ic__632489321543238858.xml" value="0.1205" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/ic__l.xml" value="0.1205" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/ic_right.xml" value="0.1205" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/selected_pager_dot.xml" value="0.1385" />
+        <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/drawable/tab_pager_selector.xml" value="0.1385" />
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/image.xml" value="0.17760416666666667" />
         <entry key="..\:/Users/deshm/AndroidStudioProjects/NASAPictures/app/src/main/res/layout/image_detail.xml" value="0.21197916666666666" />

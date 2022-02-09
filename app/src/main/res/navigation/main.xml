@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/imageDetailFrag"
-        android:name="com.android.base.com.nasapictures.gui.fragment.ImageDetail"
+        android:name="com.android.base.com.nasapictures.gui.fragment.SwipableImageDetail"
         android:label="ImageDetail"
         >
         <argument
