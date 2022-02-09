@@ -26,21 +26,6 @@ internal class LandingViewModel(
     }
 
 
-    internal fun getSortedImages(imageData: ResponseDataItem) {
-
-
-        launchUseCases {
-            val getNasaImages: List<ResponseDataItem> = getAssetPodcasts()!!
-            var mutableList = mutableListOf<ResponseDataItem>().apply {
-                this.addAll(getNasaImages)
-                this.remove(imageData)
-                this.add(0, imageData)
-            }
-            _getNasaImages.postValue(mutableList)
-
-        }
-    }
-
     fun getAssetPodcasts(): List<ResponseDataItem>? {
         val moshi = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())

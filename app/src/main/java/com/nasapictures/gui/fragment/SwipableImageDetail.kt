@@ -36,16 +36,16 @@ class SwipableImageDetail : BaseFragment() {
         viewModel.apply {
             observe(getNasaImages) {
                 demoCollectionAdapter.ResponseData = it
-            }
-            getSortedImages(args.imagedata)
+                binding.apply {
+                    pager.setCurrentItem(it.indexOf(args.imagedata))
+                } }
+            getImages()
         }
         demoCollectionAdapter = CustomPagerAdapter(this)
         binding.apply {
 
             pager.apply {
-                pager.adapter = demoCollectionAdapter
-
-
+                this.adapter = demoCollectionAdapter
             }
 
 
