@@ -13,7 +13,4 @@ class MainActivity : BaseActivity() {
     override val bindingInflater: (LayoutInflater) -> ViewBinding = ActivityMainBinding::inflate
     override val binding: ActivityMainBinding get() = super.binding as ActivityMainBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 }
